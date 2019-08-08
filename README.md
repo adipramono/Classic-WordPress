@@ -1,4 +1,4 @@
-# WordPress-Snippets
+# Classic WordPress Starter
 Just bunch of snippets for WordPress web development using Total Theme, classic editor in mind. 
 
 Features: 
