@@ -33,17 +33,6 @@ add_action( 'wp_enqueue_scripts', 'total_child_enqueue_parent_theme_style' );
 
 
 //Classis Editor Appoarch using Total Theme Setup
-//SVG support
-function add_file_types_to_uploads($file_types){
-$new_filetypes = array();
-$new_filetypes['svg'] = 'image/svg+xml';
-$file_types = array_merge($file_types, $new_filetypes );
-return $file_types;
-}
-add_action('upload_mimes', 'add_file_types_to_uploads');
-//Hide name field when using placeholder in Gravity Form
-add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
-
 //Hide WPBakery Admin Bar 
 function vc_remove_wp_admin_bar_button() {
   remove_action( 'admin_bar_menu', array( vc_frontend_editor(), 'adminBarEditLink' ), 1000 );
@@ -51,9 +40,9 @@ function vc_remove_wp_admin_bar_button() {
 add_action( 'vc_after_init', 'vc_remove_wp_admin_bar_button' );
 
 //Hide GTB switch
-add_action('admin_head', 'i_love_classic_edior');
+add_action('admin_head', 'i_love_classic_editor');
 
-function i_love_classic_edior() {
+function i_love_classic_editor() {
   echo '<style>
    body .composer-switch a.wpb_switch-to-gutenberg {
       display:none;
