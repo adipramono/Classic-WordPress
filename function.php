@@ -31,15 +31,13 @@ function total_child_enqueue_parent_theme_style() {
 }
 add_action( 'wp_enqueue_scripts', 'total_child_enqueue_parent_theme_style' );
 
-
-//Classis Editor Appoarch using Total Theme Setup
-//Hide WPBakery Admin Bar 
+// Hide WPBakery Admin Bar 
 function vc_remove_wp_admin_bar_button() {
   remove_action( 'admin_bar_menu', array( vc_frontend_editor(), 'adminBarEditLink' ), 1000 );
 }
 add_action( 'vc_after_init', 'vc_remove_wp_admin_bar_button' );
 
-//Hide GTB switch
+// Hide Gutenberg switch button
 add_action('admin_head', 'i_love_classic_editor');
 
 function i_love_classic_editor() {
@@ -49,8 +47,9 @@ function i_love_classic_editor() {
     } 
   </style>';
 }
-//Disable gutenberg for posts
+
+// Disable Gutenberg for posts
 add_filter('use_block_editor_for_post', '__return_false', 10);
 
-//Disable gutenberg for post types
+// Disable Gutenberg for post types
 add_filter('use_block_editor_for_post_type', '__return_false', 10);
