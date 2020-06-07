@@ -1,5 +1,4 @@
-# Classic WordPress Starter
-Just bunch of snippets for WordPress web development using Total Theme, classic editor in mind. 
+Function.php snippets for WordPress web development using Total Theme, classic editor in mind. 
 
 Features: 
 1. Hide WP Bakery Admin Bar
